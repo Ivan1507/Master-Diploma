@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.5)
+
+project(Rich_table LANGUAGES CXX VERSION 0.0.1)
+
+find_package(Catch2 REQUIRED)
+add_executable(tests test.cpp)
+target_link_libraries(tests PUBLIC Catch2::Catch2WithMain)
+add_test(NAME tests COMMAND tests)
+
+
